@@ -9,11 +9,11 @@ import App from './app'
 // establishes socket connection
 import './socket'
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router history={history}>
-      <App />
-    </Router>
-  </Provider>,
-  document.getElementById('app')
-)
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <Router history={history}>
+//       <App />
+//     </Router>
+//   </Provider>,
+//   document.getElementById('app')
+// )
