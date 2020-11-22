@@ -42,8 +42,26 @@ function Scroller(stage) {
   this.front = new Walls()
   stage.addChild(this.front)
 
-  // this.sprite = new Sprite();
-  // stage.addChild(this.sprite)
+  var texture = PIXI.Texture.from('resources/flappy-bird.png')
+  var sprite = new PIXI.Sprite(texture)
+
+  //   sprite.anchor.set(0);
+  //
+
+  sprite.x = 0
+  sprite.interactive = true
+  sprite.buttonMode = true
+  sprite.on('click', onClick())
+  function onClick() {
+    sprite.scale.x *= 1.01
+    sprite.scale.y *= 1.01
+    console.log('I"ve been clicked')
+  }
+  stage.addChild(sprite)
+  // function onClick(){
+  //   sprite.scale.x *=1.1;
+  //   sprite.scale.y *= 1.1;
+  // }
 
   this.mapBuilder = new MapBuilder(this.front)
 
